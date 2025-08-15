@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="title">Eternal Sin Remastered - Lineage 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <img src="assets/logo.png" alt="Eternal Sin Logo" class="logo-img">
+
+    <nav>
+      <ul>
+        <li><a href="#inicio" data-translate="home">Home</a></li>
+        <li><a href="#info" data-translate="server">Server</a></li>
+        <li><a href="#doacoes" data-translate="donate">Donate</a></li>
+        <li><a href="#loja" data-translate="store">Store</a></li>
+        <li><a href="" data-translate="discord">Discord</a></li>
+        <li><a href="login.html" data-translate="login">Login</a></li>
+
+        <!-- Novo seletor de idioma -->
+          <li class="lang-selector">
+            <button class="lang-btn" data-lang="en">
+              <img src="assets/en.png" alt="English">
+            </button>
+            <button class="lang-btn" data-lang="pt">
+              <img src="assets/pt.png" alt="Português">
+            </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- HERO BANNER -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay">
+      <div class="hero-texto">
+        <h2 data-translate="welcome">Welcome to Eternal Sin Remastered</h2>
+        <p data-translate="description">Unique server with nostalgic gameplay and absolute balance.</p>
+        <a href="login.html" class="btn" data-translate="createAccount">Create Account</a>
+        <a href="#baixar" class="btn secundario" data-translate="download">Download</a>
+      </div>
+    </div>
+  </section>
+
+<!-- INFORMATION -->
+<section id="info" class="secao">
+  <div class="info-box">
+    <h2 data-translate="aboutTitle">About the Server</h2>
+    <p data-translate="aboutText">Interlude server with progressive system, anti-pay-to-win and high stability.</p>
+    
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="icon">📜</span>
+        <strong data-translate="chronicleLabel">Chronicle:</strong> <span data-translate="chronicleValue">Interlude</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">⚡</span>
+        <strong data-translate="ratesLabel">Rates:</strong> <span data-translate="ratesValue">XP x10 / SP x10 / Adena x5</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">🛡️</span>
+        <strong data-translate="securityLabel">Security:</strong> <span data-translate="securityValue">Anti-bot and anti-DDOS protection</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">📍</span>
+        <strong data-translate="locationLabel">Location:</strong> <span data-translate="locationValue">Server in Brazil (low ping)</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">🎯</span>
+        <strong data-translate="eventsLabel">Events:</strong> <span data-translate="eventsValue">Weekly and monthly events with exclusive rewards</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">👥</span>
+        <strong data-translate="communityLabel">Community:</strong> <span data-translate="communityValue">Active and moderated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- DONATIONS (novo painel) -->
+<section id="doacoes" class="secao doacoes-painel">
+  <div class="doacoes-wrap">
+    <h2 data-translate="donationTitle">Donation Panel</h2>
+    <p class="sub" data-translate="donationText">
+      Support the server and receive Eternal Coins to spend in the store!
+    </p>
+
+    <!-- Abas de método -->
+    <div class="tabs">
+      <button class="tab active" data-tab="pix" data-translate="tabPix">Pix</button>
+      <button class="tab" data-tab="card" data-translate="tabCard">Card</button>
+      <button class="tab" data-tab="paypal" data-translate="tabPaypal">PayPal</button>
+    </div>
+
+    <!-- Pacotes -->
+    <div class="pacotes-grid" id="pacotesGrid">
+      <!-- Cards renderizados por JS; fallback estático caso JS off: -->
+      <div class="pacote" data-valor="10" data-coins="100">
+        <h3>Bronze</h3>
+        <p class="coins">100 Coins</p>
+        <p class="price">R$ 10</p>
+        <button class="btn donate-btn" data-translate="donateBtn">Donate</button>
+      </div>
+      <div class="pacote destaque" data-valor="30" data-coins="350">
+        <div class="tag" data-translate="bestValue">Best value</div>
+        <h3>Silver</h3>
+        <p class="coins">350 Coins</p>
+        <p class="price">R$ 30</p>
+        <button class="btn donate-btn" data-translate="donateBtn">Donate</button>
+      </div>
+      <div class="pacote" data-valor="50" data-coins="600">
+        <h3>Gold</h3>
+        <p class="coins">600 Coins</p>
+        <p class="price">R$ 50</p>
+        <button class="btn donate-btn" data-translate="donateBtn">Donate</button>
+      </div>
+    </div>
+
+    <!-- Valor customizado / cupom -->
+    <div class="custom-area">
+      <div class="custom-field">
+        <label data-translate="customAmount">Custom amount (BRL)</label>
+        <input id="customAmount" type="number" min="5" step="1" placeholder="Ex: 25" />
+      </div>
+      <div class="custom-field">
+        <label data-translate="coupon">Coupon</label>
+        <input id="couponCode" type="text" maxlength="20" placeholder="EX: BEMVINDO10" />
+      </div>
+      <button id="customDonateBtn" class="btn" data-translate="donateBtn">Donate</button>
+      <p class="obs" data-translate="donationObs">
+        Coins are delivered automatically after payment approval.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal aguardando pagamento / QR Pix -->
+  <div class="modal" id="payModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal">×</button>
+      <h3 data-translate="paymentTitle">Complete your payment</h3>
+      <div id="modalBody">
+        <!-- Conteúdo é injetado pelo JS dependendo do método -->
+      </div>
+      <p id="statusText" class="status-text"></p>
+    </div>
+  </div>
+</section>
+
+<!-- STORE -->
+<section id="loja" class="secao">
+  <h2 data-translate="storeTitle">Server Store</h2>
+  <p data-translate="storeText">Spend your Eternal Coins in style!</p>
+  <div class="loja-itens">
+    <div class="item">
+      <img src="assets/loja/capa.png" alt="Flaming Cloak">
+      <h3 data-translate="cloakName">Flaming Cloak</h3>
+      <p data-translate="cloakPrice">200 Coins</p>
+      <button class="btn" data-translate="buyBtn">Buy</button>
+    </div>
+    <div class="item">
+      <img src="assets/loja/armadura.png" alt="Golden Armor">
+      <h3 data-translate="armorName">Golden Armor</h3>
+      <p data-translate="armorPrice">350 Coins</p>
+      <button class="btn" data-translate="buyBtn">Buy</button>
+    </div>
+    <div class="item">
+      <img src="assets/loja/montaria.png" alt="Shadow Mount">
+      <h3 data-translate="mountName">Shadow Mount</h3>
+      <p data-translate="mountPrice">500 Coins</p>
+      <button class="btn" data-translate="buyBtn">Buy</button>
+    </div>
+    <div class="item">
+      <img src="assets/loja/elmo.png" alt="Dragon Helmet">
+      <h3 data-translate="helmetName">Dragon Helmet</h3>
+      <p data-translate="helmetPrice">150 Coins</p>
+      <button class="btn" data-translate="buyBtn">Buy</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-game">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="E·Global">
+    </div>
+    <div class="footer-col">
+      <h4 data-translate="important">IMPORTANT</h4>
+      <ul>
+        <li><a href="#" data-translate="discord">Discord</a></li>
+        <li><a href="login.html" data-translate="createAccount">Create Account</a></li>
+        <li><a href="#" data-translate="supportService">Support Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-translate="useful">USEFUL</h4>
+      <ul>
+        <li><a href="#loja" data-translate="store">Store</a></li>
+        <li><a href="#doacoes" data-translate="donate">Donate</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-translate="interesting">INTERESTING</h4>
+      <ul>
+        <li><a href="#info" data-translate="aboutTitle">About Server</a></li>
+      </ul>
+    </div>
+    <div class="footer-col social-col">
+      <div class="social-icons">
+        <a href="#"><img src="assets/youtube.png" alt="Youtube"></a>
+        <a href="#"><img src="assets/discord.png" alt="Discord"></a>
+      </div>
+      <h4 data-translate="language">LANGUAGE</h4>
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPT DE TRADUÇÃO -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-top: 94px; /* mesma altura do header (60px logo + padding) */
+}
+
+header.topo {
+  background-color: #1e1f23;
+  padding: 17px 0;
+  box-shadow: 0 2px 8px #000;
+  position: fixed;       /* mantém fixo no topo */
+  top: 0;                /* fixa na parte superior */
+  left: 0;
+  width: 100%;           /* ocupa largura total */
+  z-index: 1000;         /* fica acima de outros elementos */
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffb300;
+  text-shadow: 0 0 10px #ffb300;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-image: url('assets/banner.png');
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== AUTH BOX ===== */
+.auth-box {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 40px rgba(201, 214, 20, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== TABS ===== */
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2a2a2a, #3e3e3e);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button:hover {
+  background: linear-gradient(135deg, #444, #555);
+}
+
+.tab-buttons button.active {
+  background: linear-gradient(135deg, #ffb300, #ff6600);
+  color: #121212;
+  box-shadow: 0 0 20px rgba(255, 179, 0, 0.8);
+}
+
+/* ===== INPUTS ===== */
+.auth-box input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background: #1e1f23;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-box input:focus {
+  border-color: #ffb300;
+  box-shadow: 0 0 15px rgba(255, 179, 0, 0.5);
+}
+
+/* ===== BOTÕES ===== */
+.auth-box button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffb300, #ff6600);
+  color: #121212;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 179, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.auth-box button[type="submit"]:hover {
+  background: linear-gradient(135deg, #ff6600, #ffb300);
+  box-shadow: 0 0 30px rgba(255, 102, 0, 1);
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e1f23;
+  color: white;
+  font-size: 0.9rem;
+}

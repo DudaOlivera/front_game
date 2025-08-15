@@ -1,0 +1,574 @@
+/* -------------------- RESET & BASE -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-top: 94px;
+}
+
+/* -------------------- HEADER / TOPO -------------------- */
+header.topo {
+  background-color: #1e1f23;
+  padding: 17px 0;
+  box-shadow: 0 2px 8px #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffb300;
+}
+
+/* -------------------- SELETOR DE IDIOMA -------------------- */
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-selector select {
+  padding: 5px 8px;
+  border: 1px solid #444;
+  background: #121212;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.lang-selector select:hover {
+  border-color: #ffb300;
+  background-color: #1e1f23;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.lang-btn img {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.lang-btn:hover img {
+  border-color: #ffb300;
+  box-shadow: 0 0 6px rgba(255, 179, 0, 0.6);
+  transform: scale(1.05);
+}
+
+/* -------------------- HERO -------------------- */
+.hero {
+  background-image: url('assets/banner.png');
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.534);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-texto {
+  text-align: center;
+  justify-content: center;
+  padding-top: 20rem;
+}
+
+.hero h2 {
+  font-size: 55px;
+  color: #ffb300;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+/* -------------------- BOTÕES -------------------- */
+.btn {
+  background-color: #ffb300;
+  color: #000;
+  padding: 15px 30px;
+  margin: 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.secundario {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:hover {
+  background-color: #e6a300;
+}
+
+/* -------------------- SEÇÕES DE CONTEÚDO -------------------- */
+.secao {
+  padding: 60px 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.info-box {
+  background-color: #1f1f1f;
+  padding: 40px;
+  border: 2px solid #ffb300;
+  border-radius: 14px;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  box-shadow: 0 0 20px rgba(255, 179, 0, 0.2);
+}
+
+.info-box h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffb300;
+}
+
+.info-box p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ffb300;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.info-item .icon {
+  font-size: 20px;
+}
+
+.info-item strong {
+  color: #fff;
+}
+
+/* -------------------- PAINEL DE DOAÇÕES -------------------- */
+.doacoes-painel .doacoes-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.doacoes-painel .sub {
+  color: #ccc;
+  margin-top: 8px;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 10px;
+  background: #17181b;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 6px;
+  margin: 24px 0 10px;
+}
+
+.tab {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tab.active {
+  background: #1f1f1f;
+  border-color: #ffb300;
+  color: #ffb300;
+}
+
+.pacotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.pacote {
+  background: #1f1f1f;
+  border: 2px solid #333;
+  border-radius: 14px;
+  padding: 22px;
+  position: relative;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.pacote:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.4);
+  border-color: #444;
+}
+
+.pacote h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.pacote .coins {
+  color: #ffb300;
+  font-weight: 700;
+}
+
+.pacote .price {
+  color: #ddd;
+  margin: 8px 0 14px;
+}
+
+.pacote .tag {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  font-size: 11px;
+  letter-spacing: .5px;
+  background: #ffb300;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.pacote.destaque {
+  border-color: #ffb300;
+  box-shadow: 0 0 18px rgba(255,179,0,.18);
+}
+
+/* -------------------- CAMPOS PERSONALIZADOS -------------------- */
+.custom-area {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.custom-area .custom-field {
+  text-align: left;
+}
+
+.custom-area label {
+  display: block;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.custom-area input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #121212;
+  color: #fff;
+  outline: none;
+}
+
+.custom-area .obs {
+  grid-column: 1/-1;
+  color: #888;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* -------------------- MODAL DE PAGAMENTO -------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  width: min(560px, 94vw);
+  background: #1f1f1f;
+  border: 2px solid #ffb300;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(255,179,0,.15);
+}
+
+.modal-close {
+  position: absolute;
+  margin-left: calc(min(560px, 94vw) - 36px);
+  margin-top: -10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #121212;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.status-text {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* -------------------- QR CODE E INSTRUÇÕES -------------------- */
+.pay-instructions {
+  background: #2a2a2a;
+  border: 1px dashed #444;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.qr {
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.qr img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  background: #111;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.copyline {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.copyline input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #121212;
+  color: #fff;
+}
+
+.copyline button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #ffb300;
+  color: #000;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+/* -------------------- LOJA -------------------- */
+.loja-itens {
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #ffb300;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+}
+
+.item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.item h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: white;
+  font-weight: bold;
+}
+
+.item p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #ffb300;
+}
+
+/* -------------------- RODAPÉ -------------------- */
+.footer-game {
+  background: #1e1f23;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffb300;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffb300;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s;
+}
+
+.social-icons img:hover {
+  opacity: 0.8;
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  color: #ffb300;
+}
