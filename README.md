@@ -64,5 +64,3 @@ Este projeto foi desenvolvido para fins **educacionais e demonstrativos**.
 
 ---
 
-Se quiser, posso também criar **uma versão mais estilizada com imagens no README** para deixar bem profissional, como vemos em repositórios de jogos e landing pages.
-Quer que eu já monte essa versão visualmente caprichada?
