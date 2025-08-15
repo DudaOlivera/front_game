@@ -102,8 +102,8 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* -------------------- HERO -------------------- */
-.hero {
+/* -------------------- BANNER -------------------- */
+.banner {
   background-image: url('assets/banner.png');
   height: 100vh;
   width: 100vw;
@@ -113,7 +113,7 @@ nav a:hover {
   background-position: center;
 }
 
-.hero-overlay {
+.banner-overlay {
   background-color: rgba(0, 0, 0, 0.534);
   height: 100%;
   width: 100%;
@@ -122,18 +122,18 @@ nav a:hover {
   align-items: center;
 }
 
-.hero-texto {
+.banner-texto {
   text-align: center;
   justify-content: center;
   padding-top: 20rem;
 }
 
-.hero h2 {
+.banner h2 {
   font-size: 55px;
   color: #ffb300;
 }
 
-.hero p {
+.banner p {
   font-size: 24px;
   margin: 30px 0;
 }
@@ -571,4 +571,127 @@ nav a:hover {
 
 .footer-links a:hover {
   color: #ffb300;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* Telas até 1024px (tablets) */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  .banner-texto {
+    padding-top: 12rem;
+  }
+
+  .banner h2 {
+    font-size: 40px;
+  }
+
+  .banner p {
+    font-size: 20px;
+  }
+}
+
+/* Telas até 768px (celulares grandes) */
+@media (max-width: 768px) {
+  /* HEADER */
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  /* BANNER */
+  .banner-texto {
+    padding-top: 8rem;
+  }
+
+  .banner h2 {
+    font-size: 32px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  /* INFO */
+  .info-box {
+    padding: 20px;
+  }
+
+  /* DOAÇÕES - custom area em coluna */
+  .custom-area {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Telas até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .banner h2 {
+    font-size: 26px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pacotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loja-itens {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo img {
+    width: 80px;
+  }
 }

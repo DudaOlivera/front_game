@@ -10,18 +10,18 @@ body {
   font-family: 'Orbitron', sans-serif;
   font-size: 16px;
   line-height: 1.8;
-  padding-top: 94px; /* mesma altura do header (60px logo + padding) */
+  padding-top: 94px; 
 }
 
 header.topo {
   background-color: #1e1f23;
   padding: 17px 0;
   box-shadow: 0 2px 8px #000;
-  position: fixed;       /* mantém fixo no topo */
-  top: 0;                /* fixa na parte superior */
+  position: fixed;       
+  top: 0;                
   left: 0;
-  width: 100%;           /* ocupa largura total */
-  z-index: 1000;         /* fica acima de outros elementos */
+  width: 100%;           
+  z-index: 1000;        
 }
 
 .logo-img {
@@ -56,8 +56,8 @@ nav a:hover {
   text-shadow: 0 0 10px #ffb300;
 }
 
-/* ===== HERO ===== */
-.hero {
+/* ===== BANNER ===== */
+.banner {
   background-image: url('assets/banner.png');
   height: 80vh;
   width: 100vw;
@@ -67,7 +67,7 @@ nav a:hover {
   background-position: center;
 }
 
-.hero-overlay {
+.banner-overlay {
   background-color: rgba(0, 0, 0, 0.8);
   height: 100%;
   width: 100%;
@@ -165,4 +165,92 @@ footer {
   background: #1e1f23;
   color: white;
   font-size: 0.9rem;
+}
+
+/* ===================== RESPONSIVIDADE LOGIN ===================== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .auth-box {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  /* HEADER */
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  /* BANNER */
+  .banner {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  /* AUTH BOX */
+  .auth-box {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+
+  /* TABS */
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-buttons button {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .auth-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .auth-box input {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .auth-box button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
