@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #0f0f1a;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
   font-size: 16px;
@@ -16,7 +16,7 @@ body {
 
 /* -------------------- HEADER / TOPO -------------------- */
 header.topo {
-  background-color: #1e1f23;
+  background-color: #161627;
   padding: 17px 0;
   box-shadow: 0 2px 8px #000;
   position: fixed;
@@ -29,6 +29,7 @@ header.topo {
 .logo-img {
   height: 60px;
   width: auto;
+  border-radius: 15px;
 }
 
 .container {
@@ -54,7 +55,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffb300;
+  color: #6a5acd;
 }
 
 /* -------------------- SELETOR DE IDIOMA -------------------- */
@@ -67,7 +68,7 @@ nav a:hover {
 .lang-selector select {
   padding: 5px 8px;
   border: 1px solid #444;
-  background: #121212;
+  background: #0f0f1a;
   color: #fff;
   font-size: 14px;
   border-radius: 4px;
@@ -76,8 +77,8 @@ nav a:hover {
 }
 
 .lang-selector select:hover {
-  border-color: #ffb300;
-  background-color: #1e1f23;
+  border-color: #6a5acd;
+  background-color: #1b1b2e;
 }
 
 .lang-btn {
@@ -97,8 +98,8 @@ nav a:hover {
 }
 
 .lang-btn:hover img {
-  border-color: #ffb300;
-  box-shadow: 0 0 6px rgba(255, 179, 0, 0.6);
+  border-color: #6a5acd;
+  box-shadow: 0 0 6px rgba(106, 90, 205, 0.6);
   transform: scale(1.05);
 }
 
@@ -130,7 +131,7 @@ nav a:hover {
 
 .banner h2 {
   font-size: 55px;
-  color: #ffb300;
+  color: #6a5acd;
 }
 
 .banner p {
@@ -140,8 +141,8 @@ nav a:hover {
 
 /* -------------------- BOTÕES -------------------- */
 .btn {
-  background-color: #ffb300;
-  color: #000;
+  background: linear-gradient(135deg, #4facfe, #6a5acd);
+  color: #fff;
   padding: 15px 30px;
   margin: 15px;
   text-decoration: none;
@@ -159,11 +160,8 @@ nav a:hover {
 }
 
 .btn:hover {
-  opacity: 0.85;
-}
-
-.btn:hover {
-  background-color: #e6a300;
+  opacity: 0.9;
+  transform: scale(1.03);
 }
 
 /* -------------------- SEÇÕES DE CONTEÚDO -------------------- */
@@ -175,19 +173,19 @@ nav a:hover {
 }
 
 .info-box {
-  background-color: #1f1f1f;
+  background-color: #1a1a2f;
   padding: 40px;
-  border: 2px solid #ffb300;
+  border: 2px solid #6a5acd;
   border-radius: 14px;
   max-width: 900px;
   margin: 0 auto 60px auto;
-  box-shadow: 0 0 20px rgba(255, 179, 0, 0.2);
+  box-shadow: 0 0 20px rgba(106, 90, 205, 0.25);
 }
 
 .info-box h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #ffb300;
+  color: #6a5acd;
 }
 
 .info-box p {
@@ -203,10 +201,10 @@ nav a:hover {
 }
 
 .info-item {
-  background-color: #2a2a2a;
+  background-color: #252545;
   padding: 15px;
   border-radius: 8px;
-  border-left: 4px solid #ffb300;
+  border-left: 4px solid #4facfe;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -235,7 +233,7 @@ nav a:hover {
 .tabs {
   display: inline-flex;
   gap: 10px;
-  background: #17181b;
+  background: #171729;
   border: 1px solid #333;
   border-radius: 10px;
   padding: 6px;
@@ -253,9 +251,9 @@ nav a:hover {
 }
 
 .tab.active {
-  background: #1f1f1f;
-  border-color: #ffb300;
-  color: #ffb300;
+  background: #1f1f3a;
+  border-color: #6a5acd;
+  color: #6a5acd;
 }
 
 .pacotes-grid {
@@ -266,7 +264,7 @@ nav a:hover {
 }
 
 .pacote {
-  background: #1f1f1f;
+  background: #1a1a2f;
   border: 2px solid #333;
   border-radius: 14px;
   padding: 22px;
@@ -287,7 +285,7 @@ nav a:hover {
 }
 
 .pacote .coins {
-  color: #ffb300;
+  color: #6a5acd;
   font-weight: 700;
 }
 
@@ -302,16 +300,16 @@ nav a:hover {
   right: 12px;
   font-size: 11px;
   letter-spacing: .5px;
-  background: #ffb300;
-  color: #000;
+  background: #6a5acd;
+  color: #fff;
   padding: 4px 8px;
   border-radius: 999px;
   font-weight: 800;
 }
 
 .pacote.destaque {
-  border-color: #ffb300;
-  box-shadow: 0 0 18px rgba(255,179,0,.18);
+  border-color: #4facfe;
+  box-shadow: 0 0 18px rgba(79,172,254,.3);
 }
 
 /* -------------------- CAMPOS PERSONALIZADOS -------------------- */
@@ -339,7 +337,7 @@ nav a:hover {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #333;
-  background: #121212;
+  background: #0f0f1a;
   color: #fff;
   outline: none;
 }
@@ -368,11 +366,11 @@ nav a:hover {
 
 .modal-box {
   width: min(560px, 94vw);
-  background: #1f1f1f;
-  border: 2px solid #ffb300;
+  background: #1a1a2f;
+  border: 2px solid #6a5acd;
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 0 30px rgba(255,179,0,.15);
+  box-shadow: 0 0 30px rgba(106,90,205,.25);
 }
 
 .modal-close {
@@ -383,7 +381,7 @@ nav a:hover {
   height: 32px;
   border-radius: 8px;
   border: 1px solid #333;
-  background: #121212;
+  background: #0f0f1a;
   color: #fff;
   cursor: pointer;
   font-weight: 800;
@@ -397,7 +395,7 @@ nav a:hover {
 
 /* -------------------- QR CODE E INSTRUÇÕES -------------------- */
 .pay-instructions {
-  background: #2a2a2a;
+  background: #252545;
   border: 1px dashed #444;
   border-radius: 12px;
   padding: 12px;
@@ -430,7 +428,7 @@ nav a:hover {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #333;
-  background: #121212;
+  background: #0f0f1a;
   color: #fff;
 }
 
@@ -438,8 +436,8 @@ nav a:hover {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #444;
-  background: #ffb300;
-  color: #000;
+  background: linear-gradient(135deg, #4facfe, #6a5acd);
+  color: #fff;
   cursor: pointer;
   font-weight: 800;
 }
@@ -457,10 +455,10 @@ nav a:hover {
 }
 
 .item {
-  background-color: #1f1f1f;
+  background-color: #1a1a2f;
   padding: 20px;
   border-radius: 12px;
-  border: 2px solid #ffb300;
+  border: 2px solid #6a5acd;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -490,12 +488,12 @@ nav a:hover {
 .item p {
   font-size: 15px;
   margin-bottom: 10px;
-  color: #ffb300;
+  color: #4facfe;
 }
 
 /* -------------------- RODAPÉ -------------------- */
 .footer-game {
-  background: #1e1f23;
+  background: #161627;
   color: #fff;
   padding: 40px 20px;
   font-family: 'Orbitron', sans-serif;
@@ -520,7 +518,7 @@ nav a:hover {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 12px;
-  color: #ffb300;
+  color: #6a5acd;
   text-transform: uppercase;
 }
 
@@ -540,7 +538,7 @@ nav a:hover {
 }
 
 .footer-col ul li a:hover {
-  color: #ffb300;
+  color: #4facfe;
 }
 
 .social-icons {
@@ -570,7 +568,7 @@ nav a:hover {
 }
 
 .footer-links a:hover {
-  color: #ffb300;
+  color: #6a5acd;
 }
 
 /* ===================== RESPONSIVIDADE ===================== */

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #12121c;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
   font-size: 16px;
@@ -14,7 +14,7 @@ body {
 }
 
 header.topo {
-  background-color: #1e1f23;
+  background-color: #1a1a2a;
   padding: 17px 0;
   box-shadow: 0 2px 8px #000;
   position: fixed;       
@@ -27,6 +27,7 @@ header.topo {
 .logo-img {
   height: 60px;
   width: auto;
+  border-radius: 15px;
 }
 
 .container {
@@ -48,12 +49,12 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffb300;
-  text-shadow: 0 0 10px #ffb300;
+  color: #6a5acd;
+  text-shadow: 0 0 12px #4facfe;
 }
 
 /* ===== BANNER ===== */
@@ -85,7 +86,7 @@ nav a:hover {
   width: 100%;
   text-align: center;
   color: white;
-  box-shadow: 0 0 40px rgba(201, 214, 20, 0.5);
+  box-shadow: 0 0 40px rgba(106, 90, 205, 0.5);
   backdrop-filter: blur(6px);
 }
 
@@ -101,7 +102,7 @@ nav a:hover {
   padding: 1rem;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #2a2a2a, #3e3e3e);
+  background: linear-gradient(135deg, #2a2a3d, #3e3e55);
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -113,9 +114,9 @@ nav a:hover {
 }
 
 .tab-buttons button.active {
-  background: linear-gradient(135deg, #ffb300, #ff6600);
-  color: #121212;
-  box-shadow: 0 0 20px rgba(255, 179, 0, 0.8);
+  background: linear-gradient(135deg, #4facfe, #6a5acd);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.8);
 }
 
 /* ===== INPUTS ===== */
@@ -126,15 +127,15 @@ nav a:hover {
   border: 2px solid transparent;
   border-radius: 8px;
   outline: none;
-  background: #1e1f23;
+  background: #1e1f2e;
   color: white;
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
 
 .auth-box input:focus {
-  border-color: #ffb300;
-  box-shadow: 0 0 15px rgba(255, 179, 0, 0.5);
+  border-color: #6a5acd;
+  box-shadow: 0 0 15px rgba(106, 90, 205, 0.5);
 }
 
 /* ===== BOTÕES ===== */
@@ -143,18 +144,18 @@ nav a:hover {
   padding: 1rem;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #ffb300, #ff6600);
-  color: #121212;
+  background: linear-gradient(135deg, #4facfe, #6a5acd);
+  color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 179, 0, 0.8);
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.8);
   transition: all 0.3s ease;
 }
 
 .auth-box button[type="submit"]:hover {
-  background: linear-gradient(135deg, #ff6600, #ffb300);
-  box-shadow: 0 0 30px rgba(255, 102, 0, 1);
+  background: linear-gradient(135deg, #6a5acd, #4facfe);
+  box-shadow: 0 0 30px rgba(106, 90, 205, 1);
   transform: scale(1.05);
 }
 
@@ -162,7 +163,7 @@ nav a:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1e1f23;
+  background: #1a1a2a;
   color: white;
   font-size: 0.9rem;
 }
